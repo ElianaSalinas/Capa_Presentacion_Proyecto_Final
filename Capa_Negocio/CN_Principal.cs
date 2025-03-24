@@ -1,6 +1,6 @@
 ﻿namespace Capa_Negocio
 {
-    public class Class1
+    public class CN_Principal
     {
 
     }
