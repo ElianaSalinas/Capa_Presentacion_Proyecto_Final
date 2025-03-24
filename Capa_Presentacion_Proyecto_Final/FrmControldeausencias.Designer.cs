@@ -1,6 +1,6 @@
 ﻿namespace Capa_Presentacion_Proyecto_Final
 {
-    partial class Form1
+    partial class FrmControldeausencias
     {
         /// <summary>
         ///  Required designer variable.

@@ -1,8 +1,8 @@
 namespace Capa_Presentacion_Proyecto_Final
 {
-    public partial class Form1 : Form
+    public partial class FrmControldeausencias : Form
     {
-        public Form1()
+        public FrmControldeausencias()
         {
             InitializeComponent();
         }
