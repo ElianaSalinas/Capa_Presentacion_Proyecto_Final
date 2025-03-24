@@ -10,8 +10,8 @@ namespace Capa_Negocio
     public interface Interface_Empleados
     {
         DataTable MostrarUsu();
-        void InsertarUsu(string nombre, string telefono, string edad);
-        void EditarUsu(int id, string nombre, string telefono, string edad);
+        void InsertarUsu(string nombre, string apellido, string cedula, string correo, string fechanacimiento, string cargo, string telefono, string fechaingreso, string iddepartamento, string iddireccion, string genero);
+        void EditarUsu(int id, string nombre, string apellido, string cedula, string correo, string fechanacimiento, string cargo, string telefono, string fechaingreso, string iddepartamento, string iddireccion, string genero);
         void EliminarUsu(int id);
     }
 }
