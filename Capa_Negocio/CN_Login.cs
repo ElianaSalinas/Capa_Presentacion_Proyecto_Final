@@ -12,7 +12,7 @@ namespace Capa_Negocio
         {
 
             private UsuarioDAL usuarioDAL = new UsuarioDAL();
-
+        // el fran paso por aqui
             public bool IniciarSesion(string nombreUsuario, string contraseña)
             {
                 if (string.IsNullOrEmpty(nombreUsuario) || string.IsNullOrEmpty(contraseña))
