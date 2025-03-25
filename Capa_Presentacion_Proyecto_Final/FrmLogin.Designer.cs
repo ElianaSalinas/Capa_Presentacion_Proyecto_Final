@@ -28,93 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txt_nombre = new TextBox();
-            txt_clave = new TextBox();
-            label1 = new Label();
-            lbl_nombre = new Label();
-            lbl_Clave = new Label();
-            txt_entrar = new Button();
+            btnIniciarsesión = new Button();
+            lblUsuario = new Label();
+            lblClave = new Label();
+            txtUsuario = new TextBox();
+            txtClave = new TextBox();
             SuspendLayout();
             // 
-            // txt_nombre
+            // btnIniciarsesión
             // 
-            txt_nombre.Location = new Point(331, 148);
-            txt_nombre.Name = "txt_nombre";
-            txt_nombre.Size = new Size(144, 23);
-            txt_nombre.TabIndex = 0;
+            btnIniciarsesión.Location = new Point(327, 286);
+            btnIniciarsesión.Name = "btnIniciarsesión";
+            btnIniciarsesión.Size = new Size(112, 29);
+            btnIniciarsesión.TabIndex = 0;
+            btnIniciarsesión.Text = "Iniciar Sesión";
+            btnIniciarsesión.UseVisualStyleBackColor = true;
+            btnIniciarsesión.Click += btnIniciarsesión_Click;
             // 
-            // txt_clave
+            // lblUsuario
             // 
-            txt_clave.Location = new Point(331, 201);
-            txt_clave.Name = "txt_clave";
-            txt_clave.Size = new Size(144, 23);
-            txt_clave.TabIndex = 2;
+            lblUsuario.AutoSize = true;
+            lblUsuario.Location = new Point(214, 142);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(62, 20);
+            lblUsuario.TabIndex = 1;
+            lblUsuario.Text = "Usuario:";
             // 
-            // label1
+            // lblClave
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 5;
-            label1.Text = "label1";
+            lblClave.AutoSize = true;
+            lblClave.Location = new Point(228, 196);
+            lblClave.Name = "lblClave";
+            lblClave.Size = new Size(48, 20);
+            lblClave.TabIndex = 2;
+            lblClave.Text = "Clave:";
             // 
-            // lbl_nombre
+            // txtUsuario
             // 
-            lbl_nombre.AutoSize = true;
-            lbl_nombre.Font = new Font("Stencil", 14.25F);
-            lbl_nombre.Location = new Point(226, 148);
-            lbl_nombre.Name = "lbl_nombre";
-            lbl_nombre.Size = new Size(87, 22);
-            lbl_nombre.TabIndex = 6;
-            lbl_nombre.Text = "NOMBRE";
+            txtUsuario.Location = new Point(314, 142);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(144, 27);
+            txtUsuario.TabIndex = 3;
             // 
-            // lbl_Clave
+            // txtClave
             // 
-            lbl_Clave.AutoSize = true;
-            lbl_Clave.Font = new Font("Stencil", 14.25F);
-            lbl_Clave.Location = new Point(245, 201);
-            lbl_Clave.Name = "lbl_Clave";
-            lbl_Clave.Size = new Size(65, 22);
-            lbl_Clave.TabIndex = 7;
-            lbl_Clave.Text = "CLave";
-            // 
-            // txt_entrar
-            // 
-            txt_entrar.Location = new Point(353, 281);
-            txt_entrar.Name = "txt_entrar";
-            txt_entrar.Size = new Size(122, 36);
-            txt_entrar.TabIndex = 11;
-            txt_entrar.Text = "Entrar";
-            txt_entrar.UseVisualStyleBackColor = true;
-            txt_entrar.Click += txt_entrar_Click;
+            txtClave.Location = new Point(314, 193);
+            txtClave.Name = "txtClave";
+            txtClave.Size = new Size(144, 27);
+            txtClave.TabIndex = 4;
             // 
             // FrmLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlDark;
             ClientSize = new Size(800, 450);
-            Controls.Add(txt_entrar);
-            Controls.Add(lbl_Clave);
-            Controls.Add(lbl_nombre);
-            Controls.Add(label1);
-            Controls.Add(txt_clave);
-            Controls.Add(txt_nombre);
+            Controls.Add(txtClave);
+            Controls.Add(txtUsuario);
+            Controls.Add(lblClave);
+            Controls.Add(lblUsuario);
+            Controls.Add(btnIniciarsesión);
             Name = "FrmLogin";
             Text = "FrmLogin";
-            Load += FrmLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox txt_nombre;
-        private TextBox txt_clave;
-        private Label label1;
-        private Label lbl_nombre;
-        private Label lbl_Clave;
-        private Button txt_entrar;
+        private Button btnIniciarsesión;
+        private Label lblUsuario;
+        private Label lblClave;
+        private TextBox txtUsuario;
+        private TextBox txtClave;
     }
 }

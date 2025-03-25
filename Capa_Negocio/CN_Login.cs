@@ -1,4 +1,4 @@
-﻿using ProyectoLogin.DAL;
+﻿using Capa_Datos.ClasesDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,22 +11,34 @@ using Conexion;
 
 namespace Capa_Negocio
 {
-     class CN_Login
-
+    public class CN_Login
+    {
+        public class UsuarioNegocio
         {
+            private UsuariosDAL usuariosDAL = new UsuariosDAL();
 
-            private UsuarioDAL usuarioDAL = new UsuarioDAL();
-        // el fran paso por aqui
-            public bool IniciarSesion(string nombreUsuario, string contraseña)
+            public bool IniciarSesion(string usuario, string contraseña)
             {
-                if (string.IsNullOrEmpty(nombreUsuario) || string.IsNullOrEmpty(contraseña))
-                {
-                    return false; // No se permite login con campos vacíos
-                }
+                if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(contraseña))
+                    throw new ArgumentException("El usuario y la contraseña no pueden estar vacíos.");
 
-                return usuarioDAL.ValidarUsuario(nombreUsuario, contraseña);
+                try
+                {
+                    return usuariosDAL.ObtenerUsuario(usuario, contraseña) != null;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error en la validación del usuario.", ex);
+                }
             }
         }
+
+
     }
+}
 
 
+
+
+     
+    

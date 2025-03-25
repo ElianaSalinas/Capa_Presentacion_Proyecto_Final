@@ -21,43 +21,22 @@ namespace Capa_Presentacion_Proyecto_Final
             InitializeComponent();
         }
 
-        private void FrmLogin_Load(object sender, EventArgs e)
+        private void btnIniciarsesión_Click(object sender, EventArgs e)
         {
+           CN_Login.UsuarioNegocio usuarioNegocio = new CN_Login.UsuarioNegocio();
+
+            if (usuarioNegocio.IniciarSesion(txtUsuario.Text, txtClave.Text))
+            {
+                MessageBox.Show("Bienvenido");
+                FrmPrincipal frmPrincipal = new FrmPrincipal();
+                frmPrincipal.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos");
+            }
 
         }
-
-        private void txt_entrar_Click(object sender, EventArgs e)
-        {
-            
-                {
-                    string usuario = txt_nombre.Text;
-                    string contraseña = txt_clave.Text;
-
-                    MessageBox.Show("Entró al botón"); // 1️⃣ Verifica que el botón responde
-
-                    UsuarioDAL usuarioDAL = new UsuarioDAL();
-
-                    bool resultado = usuarioDAL.ValidarUsuario(usuario, contraseña);
-
-                    MessageBox.Show("Resultado de ValidarUsuario: " + resultado); // 2️⃣ Muestra true o false
-
-                    if (resultado)
-                    {
-                        MessageBox.Show("Inicio de sesión exitoso", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Hide();
-                        // Aquí puedes abrir otro formulario principal
-                    }
-                    else 
-                    {
-                        MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-
-                }
-
-            
-    }
     }
 }
-
-
-
