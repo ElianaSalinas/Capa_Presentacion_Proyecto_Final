@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoLogin.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,22 @@ using System.Threading.Tasks;
 
 namespace Capa_Negocio
 {
-    internal class CN_Login
-    {
+     class CN_Login
+
+        {
+
+            private UsuarioDAL usuarioDAL = new UsuarioDAL();
+
+            public bool IniciarSesion(string nombreUsuario, string contraseña)
+            {
+                if (string.IsNullOrEmpty(nombreUsuario) || string.IsNullOrEmpty(contraseña))
+                {
+                    return false; // No se permite login con campos vacíos
+                }
+
+                return usuarioDAL.ValidarUsuario(nombreUsuario, contraseña);
+            }
+        }
     }
-}
+
+
