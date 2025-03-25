@@ -71,9 +71,10 @@ namespace Capa_Presentacion_Proyecto_Final
 
         private void btnControldeempleados_Click(object sender, EventArgs e)
         {
-            FrmControldeempleados frmControldeempleados = new FrmControldeempleados();
-            frmControldeempleados.Show();
+            FrmVisualcontroldeempleados frmVisualcontroldeempleados = new FrmVisualcontroldeempleados();
+            frmVisualcontroldeempleados.Show();
             this.Hide();
+
         }
 
     }

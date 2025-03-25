@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Capa_Presentacion_Proyecto_Final
 {
-    public partial class FrmRegistrarempleadoscs : Form
+    public partial class FrmVisualregistrarempleado : Form
     {
-        public FrmRegistrarempleadoscs()
+        public FrmVisualregistrarempleado()
         {
             InitializeComponent();
         }

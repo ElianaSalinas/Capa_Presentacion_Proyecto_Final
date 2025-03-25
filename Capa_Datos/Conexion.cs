@@ -23,6 +23,9 @@ namespace Conexion
         }
     }
 
+
+
+
     public class CD_Empleados
     {
         private CD_Conexion conexion = new CD_Conexion();
