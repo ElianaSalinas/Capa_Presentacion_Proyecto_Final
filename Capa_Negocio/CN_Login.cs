@@ -11,7 +11,22 @@ using Conexion;
 
 namespace Capa_Negocio
 {
-    internal class CN_Login
-    {
+     class CN_Login
+
+        {
+
+            private UsuarioDAL usuarioDAL = new UsuarioDAL();
+        // el fran paso por aqui
+            public bool IniciarSesion(string nombreUsuario, string contraseña)
+            {
+                if (string.IsNullOrEmpty(nombreUsuario) || string.IsNullOrEmpty(contraseña))
+                {
+                    return false; // No se permite login con campos vacíos
+                }
+
+                return usuarioDAL.ValidarUsuario(nombreUsuario, contraseña);
+            }
+        }
     }
-}
+
+
